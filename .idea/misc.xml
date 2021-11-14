@@ -7,7 +7,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.39114583333333336" />
         <entry key="app/src/main/res/drawable/image_loading_drawable.xml" value="0.2520833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/filme_thumbnail_layout.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/filme_thumbnail_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_filme_preview.xml" value="0.2681704260651629" />
         <entry key="app/src/main/res/layout/fragment_lista_filmes.xml" value="0.375" />
         <entry key="app/src/main/res/layout/preview_filme.xml" value="0.5" />

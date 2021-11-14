@@ -34,4 +34,16 @@
         app:layout_constraintBottom_toBottomOf="@id/ivPoster"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/ic_outline_info_24"
+        android:paddingStart="5sp"
+        android:paddingEnd="5sp"
+
+        app:layout_constraintTop_toTopOf="@id/tvTitulo"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitulo"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitulo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
