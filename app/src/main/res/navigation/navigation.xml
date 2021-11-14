@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listaFilmesFragment">
+
+    <fragment
+        android:id="@+id/listaFilmesFragment"
+        android:name="com.example.desafiotokenlab.ListaFilmesFragment"
+        android:label="ListaFilmesFragment"
+        tools:layout="@layout/fragment_lista_filmes" >
+        <action
+            android:id="@+id/action_listaFilmesFragment_to_listaFilmesTentarNovamente"
+            app:destination="@id/listaFilmesTentarNovamente" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaFilmesTentarNovamente"
+        android:name="com.example.desafiotokenlab.ListaFilmesTentarNovamente"
+        android:label="fragment_lista_filmes_tentar_novamente"
+        tools:layout="@layout/fragment_lista_filmes_tentar_novamente" >
+        <action
+            android:id="@+id/action_listaFilmesTentarNovamente_to_listaFilmesFragment"
+            app:destination="@id/listaFilmesFragment" />
+    </fragment>
+</navigation>

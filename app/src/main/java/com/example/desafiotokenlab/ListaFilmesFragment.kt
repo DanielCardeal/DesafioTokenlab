@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafiotokenlab.databinding.FragmentListaFilmesBinding
@@ -18,24 +19,26 @@ import retrofit2.Response
  * Lista dos 20 melhores filmes de acordo com a TMDB.
  */
 class ListaFilmesFragment : Fragment() {
+    private lateinit var binding : FragmentListaFilmesBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding = DataBindingUtil.inflate<FragmentListaFilmesBinding>(
+        binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_lista_filmes,
             container,
             false
         )
-        carregaFilmes(binding)
+        carregaFilmes()
         return binding.root
     }
 
     /**
      * Tenta carregar a lista de filmes usando a API do TMDB
      */
-    private fun carregaFilmes(binding: FragmentListaFilmesBinding) {
+    private fun carregaFilmes() {
         TmdbApi.retrofitService.getFilmes().enqueue(
             object : Callback<List<Filme>> {
                 override fun onResponse(call: Call<List<Filme>>, response: Response<List<Filme>>) {
@@ -57,7 +60,7 @@ class ListaFilmesFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<List<Filme>>, t: Throwable) {
-                    val msg = "Não foi possível conectar à internet."
+                    val msg = R.string.impossivel_conectar_internet.toString()
                     onCarregaFilmesFailure(msg)
                 }
             })
@@ -68,11 +71,11 @@ class ListaFilmesFragment : Fragment() {
      * Notifica o usuário do motivo da falha de conexão.
      */
     private fun onCarregaFilmesFailure(msg: String) {
-        // TODO: adicionar tela para tentar conectar novamente
         Toast.makeText(
             activity,
             msg,
             Toast.LENGTH_SHORT
         ).show()
+        view?.findNavController()?.navigate(R.id.action_listaFilmesFragment_to_listaFilmesTentarNovamente)
     }
 }

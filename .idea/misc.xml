@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/filme_thumbnail_layout.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_filme_preview.xml" value="0.2681704260651629" />
         <entry key="app/src/main/res/layout/fragment_lista_filmes.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_lista_filmes_tentar_novamente.xml" value="0.375" />
         <entry key="app/src/main/res/layout/preview_filme.xml" value="0.5" />
       </map>
     </option>

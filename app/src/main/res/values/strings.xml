@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DesafioTokenlab</string>
+    <string name="tentar_novamente">Tentar novamente</string>
+    <string name="impossivel_conectar_internet">Não foi possível conectar à rede</string>
 </resources>
