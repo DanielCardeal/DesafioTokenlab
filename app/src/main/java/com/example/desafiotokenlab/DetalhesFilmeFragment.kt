@@ -57,6 +57,7 @@ class DetalhesFilmeFragment : Fragment() {
                     // Carrega o poster
                     Glide.with(this@DetalhesFilmeFragment)
                         .load(detalhes.posterUrl)
+                        .error(R.drawable.ic_baseline_not_interested_24)
                         .into(binding.ivPoster)
                     binding.ivPoster.contentDescription = "Poster de ${detalhes.titulo}"
                 }
