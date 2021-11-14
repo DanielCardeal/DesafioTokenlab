@@ -60,7 +60,7 @@ class ListaFilmesFragment : Fragment() {
                 }
 
                 override fun onFailure(call: Call<List<Filme>>, t: Throwable) {
-                    val msg = R.string.impossivel_conectar_internet.toString()
+                    val msg = "Sem conexão com a internet."
                     onCarregaFilmesFailure(msg)
                 }
             })
