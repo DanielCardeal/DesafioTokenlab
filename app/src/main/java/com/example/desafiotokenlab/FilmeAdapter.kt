@@ -3,8 +3,10 @@ package com.example.desafiotokenlab
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 /**
  * Um RecyclerView Adapter para filmes.
@@ -19,6 +21,12 @@ class FilmeAdapter(private val filmes: List<Filme>) :
         fun bind(filme: Filme) {
             val tvTitulo = view.findViewById<TextView>(R.id.tvTitulo)
             tvTitulo.text = filme.titulo
+
+            val ivPoster = view.findViewById<ImageView>(R.id.ivPoster)
+            Glide.with(view.context)
+                .load(filme.posterUrl)
+                .into(ivPoster)
+            ivPoster.contentDescription = "Poster de ${filme.titulo}"
         }
     }
 

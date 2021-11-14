@@ -11,4 +11,5 @@ import com.squareup.moshi.Json
 data class Filme(
     val id: Int,
     @field:Json(name = "title") val titulo: String,
+    @field:Json(name = "poster_url") val posterUrl : String,
 )
