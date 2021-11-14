@@ -26,6 +26,7 @@ class FilmeAdapter(private val filmes: List<Filme>) :
             val ivPoster = view.findViewById<ImageView>(R.id.ivPoster)
             Glide.with(view.context)
                 .load(filme.posterUrl)
+                .error(R.drawable.ic_baseline_not_interested_24)
                 .into(ivPoster)
             ivPoster.contentDescription = "Poster de ${filme.titulo}"
 
