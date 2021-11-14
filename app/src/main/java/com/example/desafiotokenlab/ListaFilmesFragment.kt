@@ -68,14 +68,10 @@ class ListaFilmesFragment : Fragment() {
     }
 
     /**
-     * Notifica o usuário do motivo da falha de conexão.
+     * Lida com falhas de conexão durante o carregamento dos filmes.
      */
     private fun onCarregaFilmesFailure(msg: String) {
-        Toast.makeText(
-            activity,
-            msg,
-            Toast.LENGTH_SHORT
-        ).show()
+        Toast.makeText( activity, msg, Toast.LENGTH_SHORT ).show()
         view?.findNavController()?.navigate(R.id.action_listaFilmesFragment_to_listaFilmesTentarNovamente)
     }
 }
