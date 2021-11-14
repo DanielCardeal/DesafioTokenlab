@@ -11,11 +11,9 @@
         <TextView
             android:id="@+id/tvMensagemErro"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:text="@string/impossivel_conectar_internet"
             android:textSize="@dimen/tvTextSizeH2"
-
             app:layout_constraintBottom_toTopOf="@+id/ivWarn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,9 +23,7 @@
             android:id="@+id/ivWarn"
             android:layout_width="0dp"
             android:layout_height="300dp"
-
             android:src="@drawable/ic_baseline_warning_24"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,9 +33,7 @@
             android:id="@+id/btTentarNovamente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/tentar_novamente"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

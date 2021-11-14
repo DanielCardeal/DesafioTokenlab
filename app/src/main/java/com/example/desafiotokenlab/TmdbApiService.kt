@@ -17,11 +17,11 @@ interface TmdbApiService {
     fun getFilmes(): Call<List<Filme>>
 
     @GET("/movies/{id}")
-    fun getDetalhesFilme(@Path("id") id: Int) : Call<DetalhesFilme>
+    fun getDetalhesFilme(@Path("id") id: Int): Call<DetalhesFilme>
 }
 
 object TmdbApi {
-    val retrofitService : TmdbApiService by lazy {
+    val retrofitService: TmdbApiService by lazy {
         retrofit.create(TmdbApiService::class.java)
     }
 }

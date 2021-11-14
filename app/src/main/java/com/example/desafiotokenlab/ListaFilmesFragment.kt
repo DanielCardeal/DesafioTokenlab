@@ -19,7 +19,7 @@ import retrofit2.Response
  * Lista dos 20 melhores filmes de acordo com a TMDB.
  */
 class ListaFilmesFragment : Fragment() {
-    private lateinit var binding : FragmentListaFilmesBinding
+    private lateinit var binding: FragmentListaFilmesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -71,7 +71,8 @@ class ListaFilmesFragment : Fragment() {
      * Lida com falhas de conexão durante o carregamento dos filmes.
      */
     private fun onCarregaFilmesFailure(msg: String) {
-        Toast.makeText( activity, msg, Toast.LENGTH_SHORT ).show()
-        view?.findNavController()?.navigate(R.id.action_listaFilmesFragment_to_listaFilmesTentarNovamente)
+        Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show()
+        view?.findNavController()
+            ?.navigate(R.id.action_listaFilmesFragment_to_listaFilmesTentarNovamente)
     }
 }

@@ -17,8 +17,7 @@
 
         <action
             android:id="@+id/action_listaFilmesFragment_to_detalhesFilmeFragment"
-            app:destination="@id/detalhesFilmeFragment">
-        </action>
+            app:destination="@id/detalhesFilmeFragment" />
     </fragment>
 
     <fragment
@@ -35,7 +34,7 @@
         android:id="@+id/detalhesFilmeFragment"
         android:name="com.example.desafiotokenlab.DetalhesFilmeFragment"
         android:label="DetalhesFilmeFragment"
-        tools:layout="@layout/fragment_detalhes_filme" >
+        tools:layout="@layout/fragment_detalhes_filme">
         <argument
             android:name="id"
             app:argType="integer" />

@@ -7,5 +7,5 @@ data class DetalhesFilme(
     @field:Json(name = "title") val titulo: String,
     @field:Json(name = "overview") val resumo: String,
     @field:Json(name = "release_date") val dataLancamento: String,
-    @field:Json(name = "poster_url") val posterUrl : String,
+    @field:Json(name = "poster_url") val posterUrl: String,
 )

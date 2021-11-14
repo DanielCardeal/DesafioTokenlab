@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="7sp" >
+    android:paddingBottom="7sp">
 
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,29 +20,24 @@
         android:id="@+id/tvTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        tools:text="Título do filme aqui"
-        android:textSize="18sp"
-        android:textColor="@color/soft_white"
         android:background="@color/transparent_black"
-
+        android:paddingVertical="4sp"
         android:paddingStart="5sp"
         android:paddingEnd="5sp"
-        android:paddingVertical="4sp"
-
+        android:textColor="@color/soft_white"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/ivPoster"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Título do filme aqui" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:src="@drawable/ic_outline_info_24"
         android:paddingStart="5sp"
         android:paddingEnd="5sp"
-
-        app:layout_constraintTop_toTopOf="@id/tvTitulo"
+        android:src="@drawable/ic_outline_info_24"
         app:layout_constraintBottom_toBottomOf="@id/tvTitulo"
-        app:layout_constraintEnd_toEndOf="@+id/tvTitulo" />
+        app:layout_constraintEnd_toEndOf="@+id/tvTitulo"
+        app:layout_constraintTop_toTopOf="@id/tvTitulo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
