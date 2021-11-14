@@ -15,6 +15,9 @@ private val retrofit = Retrofit.Builder()
 interface TmdbApiService {
     @GET("/movies")
     fun getFilmes(): Call<List<Filme>>
+
+    @GET("/movies/{id}")
+    fun getDetalhesFilme(@Path("id") id: Int) : Call<DetalhesFilme>
 }
 
 object TmdbApi {

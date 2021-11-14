@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -27,6 +28,15 @@ class FilmeAdapter(private val filmes: List<Filme>) :
                 .load(filme.posterUrl)
                 .into(ivPoster)
             ivPoster.contentDescription = "Poster de ${filme.titulo}"
+
+            // Navegação com argumentos para os detalhes do filme
+            ivPoster.setOnClickListener { view: View ->
+                val action =
+                    ListaFilmesFragmentDirections.actionListaFilmesFragmentToDetalhesFilmeFragment(
+                        filme.id
+                    )
+                view.findNavController().navigate(action)
+            }
         }
     }
 
